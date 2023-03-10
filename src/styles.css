@@ -9,7 +9,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
   
  .news-card {
-  height:650px !important;
+  height:auto;
  }
   
   .viewport {
