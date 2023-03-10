@@ -20,19 +20,26 @@ export class HomeComponent implements OnInit {
     this.newsFeedDisplay();
   }
 
-  /*****************getNewsFeed********************** */
+  /*
+  @Desc : To get the news feed data
+  @Param : NA
+  @Return : NA
+  */
   newsFeedDisplay() {
     this.apiService.getNewsFeeds().subscribe(
       (res: any) => {
-        console.log(res);
+       
         this.items = res.articles;
       },
       (err: any) => {}
     );
   }
-  articleTrackBy(index: any, color: any) {
-    return color.title;
-  }
+
+  /*
+  @Desc : Show or Hide the news title
+  @Param : boolean flag
+  @Return : NA
+  */
   showOrHideDesc(flag: boolean) {
     if (flag) {
       this.showMore = false;
