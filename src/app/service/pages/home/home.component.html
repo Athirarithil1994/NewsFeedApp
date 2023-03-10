@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="row">
+  <div class="col-md-3 col-sm-1"></div>
+  <div class="col-md-6 col-sm-10">
+     <div class="container">
+        <cdk-virtual-scroll-viewport itemSize="200" class="viewport" minBufferPx="400" maxBufferPx="500">
+           <mat-card class="news-card" *cdkVirtualFor="let item of items">
+              <h2><span *ngIf="!showMore">
+                {{item.title.substring(0,50)}}... 
+              </span>
+              <span *ngIf="showMore">
+                {{item.title}} 
+              </span>
+              <i class="bi bi-three-dots threedots-icon " (click)="showOrHideDesc(showMore)"></i>
+              </h2>
+              <h6><i *ngIf="item?.author" class="bi bi-pencil author-icon"></i>{{item.author}}</h6>
+              <img class="imgStyle" width="100%" height="auto" *ngIf="item.urlToImage" mat-card-image src="{{item?.urlToImage}}" alt="item.title">
+              <mat-card-content>
+                 <p>
+                    {{item.description}}
+                 </p>
+              </mat-card-content>
+              <mat-card-actions>
+                 <i class="bi bi-heart hover"></i><i class="bi bi-chat"></i><i class="bi bi-share"></i>
+              </mat-card-actions>
+           </mat-card>
+        </cdk-virtual-scroll-viewport>
+     </div>
+  </div>
+  <div class="col-md-3 col-sm-1"></div>
+</div>

@@ -1,0 +1,31 @@
+.nav-bar {
+	background-color: #dddd;
+	width: 98%;
+	padding: 10px;
+}
+
+.heading {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: cursive;
+}
+
+.cdk-virtual-scroll-viewport {
+	overflow-y: hidden !important;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	/* Remove scrollbar space */
+	background: transparent;
+	/* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+	background: #FF0000;
+}
+
+.nav-margin {
+	margin-left: 8px;
+}

@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container {
+    display: flex;
+    align-self: center;
+  }
+  
+ .news-card {
+  height:650px !important;
+ }
+  
+  .viewport {
+    height: 100vh;
+    width: 100%;
+
+  }
+
+  i {
+    padding: 8px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+ 
+  .imgStyle{
+    margin:0
+  }
+
+  body::-webkit-scrollbar{
+    display: none;
+  }
+  .viewport::-webkit-scrollbar{
+    display: none;
+  }

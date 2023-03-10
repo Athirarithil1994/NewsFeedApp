@@ -1,0 +1,10 @@
+.threedots-icon {
+    float: right;
+    padding: 2px;
+    color:blue;
+}
+.author-icon{
+    font-size: 12px;
+    color: blue;
+    cursor:default;
+}
